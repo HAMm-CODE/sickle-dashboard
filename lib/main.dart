@@ -37,10 +37,10 @@ class MyApp extends StatelessWidget {
               900: const Color(primaryColorCode).withOpacity(1.0),
             },
           ),
-          scaffoldBackgroundColor: Color.fromARGB(255, 241, 241, 241),
+          scaffoldBackgroundColor: const Color.fromARGB(255, 241, 241, 241),
           fontFamily: 'IBMPlexSans',
           brightness: Brightness.dark),
-      home: LoginPage(),
+      home: const LoginPage(),
     );
   }
 }

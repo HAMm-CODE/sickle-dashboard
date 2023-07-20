@@ -94,7 +94,7 @@ class _PatientsPageState extends State<PatientsPage> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.black,
                 ),
                 controller: searchController,

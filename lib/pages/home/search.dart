@@ -55,7 +55,7 @@ class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
     if (patientNames.isEmpty) {
-      return Scaffold(
+      return const Scaffold(
         body: Center(
           child: CircularProgressIndicator(),
         ),
@@ -64,20 +64,20 @@ class _SearchPageState extends State<SearchPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Search'),
+        title: const Text('Search'),
       ),
       body: Container(
         padding: const EdgeInsets.all(8.0),
         child: DropdownButtonFormField<String>(
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             labelText: 'Select a patient',
             border: OutlineInputBorder(),
           ),
           value: selectedValue,
           items: [
-            DropdownMenuItem<String>(
+            const DropdownMenuItem<String>(
               value: '',
-              child: const Text('Select a patient'),
+              child: Text('Select a patient'),
             ),
             ...patientNames.map((name) {
               return DropdownMenuItem<String>(

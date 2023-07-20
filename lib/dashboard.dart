@@ -59,17 +59,17 @@ class _MenuState extends State<Menu> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 45,
               ),
-              Text(
+              const Text(
                 'SCDM System',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 25,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               for (var i = 0; i < menu.length; i++)
@@ -163,7 +163,7 @@ class _DashBoardState extends State<DashBoard> {
 
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => LoginPage()),
+      MaterialPageRoute(builder: (context) => const LoginPage()),
     );
   }
 
@@ -226,11 +226,11 @@ class _DashBoardState extends State<DashBoard> {
                       },
                       children: [
                         HomePage(scaffoldKey: _scaffoldKey),
-                        PatientsPage(),
-                        MakePrescription(),
-                        AddAppointment(),
-                        ChatRoomPage(),
-                        WeeklyReports(),
+                        const PatientsPage(),
+                        const MakePrescription(),
+                        const AddAppointment(),
+                        const ChatRoomPage(),
+                        const WeeklyReports(),
                         // SearchPage(),
                         // SettingsPage(),
                         // Add other pages here
@@ -253,10 +253,12 @@ class _DashBoardState extends State<DashBoard> {
 }
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -264,7 +266,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: DashBoard(),
+      home: const DashBoard(),
     );
   }
 }

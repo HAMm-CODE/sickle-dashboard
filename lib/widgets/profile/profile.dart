@@ -13,7 +13,7 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-  CalendarFormat _calendarFormat = CalendarFormat.month;
+  final CalendarFormat _calendarFormat = CalendarFormat.month;
   DateTime _selectedDay = DateTime.now();
   DateTime _focusedDay = DateTime.now();
 
@@ -21,7 +21,7 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         // borderRadius: BorderRadius.only(
         //   bottomLeft: Radius.circular(Responsive.isMobile(context) ? 10 : 30.0),
         //   topLeft: Radius.circular(Responsive.isMobile(context) ? 10 : 30.0),
@@ -39,7 +39,7 @@ class _ProfileState extends State<Profile> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     radius: 30,
                     backgroundImage: AssetImage("assets/images/avatar.png"),
                   ),
@@ -61,7 +61,7 @@ class _ProfileState extends State<Profile> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ImageUploadPage(),
+                              builder: (context) => const ImageUploadPage(),
                             ),
                           );
                         },
@@ -99,27 +99,27 @@ class _ProfileState extends State<Profile> {
                       _focusedDay = focusedDay;
                     });
                   },
-                  headerStyle: HeaderStyle(
+                  headerStyle: const HeaderStyle(
                     titleTextStyle: TextStyle(
                       color: Colors.white,
                     ),
                     decoration: BoxDecoration(
                       border: Border(
                         bottom: BorderSide(
-                          color: const Color.fromARGB(255, 248, 246, 246),
+                          color: Color.fromARGB(255, 248, 246, 246),
                           width: 1.0,
                         ),
                       ),
                     ),
                   ),
-                  daysOfWeekStyle: DaysOfWeekStyle(
+                  daysOfWeekStyle: const DaysOfWeekStyle(
                     weekdayStyle: TextStyle(
                       color: Colors.white,
                     ),
                     decoration: BoxDecoration(
                       border: Border(
                         bottom: BorderSide(
-                          color: const Color.fromARGB(255, 255, 253, 253),
+                          color: Color.fromARGB(255, 255, 253, 253),
                           width: 1.0,
                         ),
                       ),

@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class WeeklyReports extends StatefulWidget {
   const WeeklyReports({Key? key}) : super(key: key);
@@ -103,7 +102,7 @@ class _WeeklyReportsState extends State<WeeklyReports> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.black,
                 ),
                 controller: searchController,
@@ -277,10 +276,12 @@ class UserData {
 }
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -288,7 +289,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: WeeklyReports(),
+      home: const WeeklyReports(),
     );
   }
 }

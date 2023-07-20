@@ -54,7 +54,7 @@ class _MenuState extends State<Menu> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               for (var i = 0; i < menu.length; i++)
@@ -89,7 +89,7 @@ class _MenuState extends State<Menu> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => PatientsPage(),
+                                  builder: (context) => const PatientsPage(),
                                 ));
                             break;
                           case 2:
@@ -97,7 +97,7 @@ class _MenuState extends State<Menu> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => MakePrescription(),
+                                  builder: (context) => const MakePrescription(),
                                 ));
                             break;
                           case 3:
@@ -105,7 +105,7 @@ class _MenuState extends State<Menu> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => AddAppointment(),
+                                  builder: (context) => const AddAppointment(),
                                 ));
                             break;
                           case 4:
@@ -113,7 +113,7 @@ class _MenuState extends State<Menu> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => ChatRoomPage(),
+                                  builder: (context) => const ChatRoomPage(),
                                 ));
                             break;
                           case 5:
@@ -121,7 +121,7 @@ class _MenuState extends State<Menu> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => WeeklyReports(),
+                                  builder: (context) => const WeeklyReports(),
                                 ));
                             break;
                           // case 6:
@@ -137,7 +137,7 @@ class _MenuState extends State<Menu> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => LoginPage(),
+                                  builder: (context) => const LoginPage(),
                                 ));
                             break;
                         }

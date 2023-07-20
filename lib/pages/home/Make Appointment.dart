@@ -209,9 +209,9 @@ class _AddAppointmentState extends State<AddAppointment> {
                 ),
                 value: selectedPatient,
                 items: [
-                  DropdownMenuItem<String>(
+                  const DropdownMenuItem<String>(
                     value: null,
-                    child: const Text('Select a patient'),
+                    child: Text('Select a patient'),
                   ),
                   ...patientNames.map((name) {
                     return DropdownMenuItem<String>(
@@ -365,10 +365,12 @@ class UserData {
 }
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -376,7 +378,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AddAppointment(),
+      home: const AddAppointment(),
     );
   }
 }

@@ -17,7 +17,7 @@ class _SettingsPageState extends State<SettingsPage> {
       body: SafeArea(
         child: Positioned(
           child: Container(
-            child: Row(
+            child: const Row(
               children: [
                 Text('this is the settings page'),
               ],

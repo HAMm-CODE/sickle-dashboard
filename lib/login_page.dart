@@ -31,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
       );
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => DashBoard()),
+        MaterialPageRoute(builder: (context) => const DashBoard()),
       );
     } catch (e) {
       print('Error: $e');
@@ -52,14 +52,14 @@ class _LoginPageState extends State<LoginPage> {
       ),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(35.0),
-        borderSide: BorderSide(color: Colors.black),
+        borderSide: const BorderSide(color: Colors.black),
       ),
       enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.black),
+        borderSide: const BorderSide(color: Colors.black),
         borderRadius: BorderRadius.circular(35.0),
       ),
       focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.red),
+        borderSide: const BorderSide(color: Colors.red),
         borderRadius: BorderRadius.circular(35.0),
       ),
     );
@@ -77,8 +77,8 @@ class _LoginPageState extends State<LoginPage> {
                   height: 300,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0xFFE40001),
-                    borderRadius: BorderRadius.only(
+                    color: const Color(0xFFE40001),
+                    borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(80),
                       bottomRight: Radius.circular(80),
                     ),
@@ -123,9 +123,9 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       child: Column(
                         children: [
-                          Row(
+                          const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: const [
+                            children: [
                               Text(
                                 'Sign In',
                                 style: TextStyle(
@@ -182,14 +182,14 @@ class _LoginPageState extends State<LoginPage> {
                                   ),
                                 ),
                                 const SizedBox(height: 30),
-                                Container(
+                                SizedBox(
                                   width: 300,
                                   height: 40,
                                   child: ElevatedButton(
                                     onPressed: handleSubmit,
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor:
-                                          Color.fromARGB(255, 228, 0, 0),
+                                          const Color.fromARGB(255, 228, 0, 0),
                                     ),
                                     child: _isLoading
                                         ? const CircularProgressIndicator()
